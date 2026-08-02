@@ -1,27 +1,27 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+ไฟล์นี้ให้คำแนะนำแก่ Claude Code (claude.ai/code) เมื่อทำงานกับโค้ดใน repository นี้
 
-## Repository nature
+## ลักษณะของ Repository นี้
 
-This is **not a source-code project** — it is an Obsidian documentation vault for a project called **My Coffee Store**. The repo contains only Markdown documents (organized under `docs/`) and Obsidian configuration (`.obsidian/`). There is no build, lint, or test tooling because there is no code to build, lint, or test. All content is written in Thai.
+นี่**ไม่ใช่โปรเจกต์ซอร์สโค้ด** — แต่เป็น Obsidian documentation vault ของโปรเจกต์ที่ชื่อว่า **My Coffee Store** ตัว repo มีแต่เอกสาร Markdown (จัดเก็บอยู่ใต้ `docs/`) และไฟล์ตั้งค่าของ Obsidian (`.obsidian/`) จึงไม่มีเครื่องมือ build, lint หรือ test เพราะไม่มีโค้ดให้ build, lint หรือ test เนื้อหาทั้งหมดเขียนเป็นภาษาไทย
 
-## Structure and workflow
+## โครงสร้างและลำดับการทำงาน (Workflow)
 
-Documents are organized under `docs/` by workflow stage, and the numeric prefixes encode the intended reading/production order:
+เอกสารถูกจัดเรียงอยู่ใต้ `docs/` ตามขั้นตอนการทำงาน โดยเลขนำหน้าโฟลเดอร์บ่งบอกลำดับการอ่าน/การผลิตเอกสารที่ตั้งใจไว้:
 
-- `docs/01-requirements/` — project requirements, split into `01-spec` (source-of-truth requirements/specs), `02-plan` (roadmap/milestones), `03-task` (actionable task breakdown)
-- `docs/02-design/` — design output, split into `01-prototypes` (UI/UX mockups, wireframes, user flow) and `02-technical` (architecture, database schema, API design)
-- `docs/03-testing/` — testing artifacts, split into `01-test-plan` (test cases/scenarios) and `02-test-result` (actual results, bugs found)
-- `docs/04-retrospectives/` — end-of-phase/sprint/milestone retrospectives
-- `docs/05-log/` — chronological changelog and decision log, recorded continuously alongside all other work
-- `docs/00-archived/` — superseded or cancelled documents, kept for historical reference (never delete docs from the project — move them here instead)
+- `docs/01-requirements/` — ความต้องการของโปรเจกต์ แบ่งเป็น `01-spec` (สเปค/ความต้องการที่เป็น source of truth), `02-plan` (roadmap/milestone), `03-task` (งานย่อยที่ลงมือทำได้จริง)
+- `docs/02-design/` — ผลลัพธ์งานออกแบบ แบ่งเป็น `01-prototypes` (mockup, wireframe, user flow ของ UI/UX) และ `02-technical` (architecture, database schema, API design)
+- `docs/03-testing/` — เอกสารการทดสอบ แบ่งเป็น `01-test-plan` (test case/สถานการณ์ทดสอบ) และ `02-test-result` (ผลการทดสอบจริง, บั๊กที่พบ)
+- `docs/04-retrospectives/` — สรุปบทเรียนหลังจบแต่ละ phase/sprint/milestone
+- `docs/05-log/` — บันทึกความเคลื่อนไหวและเหตุการณ์สำคัญแบบเรียงตามลำดับเวลา บันทึกคู่ขนานไปตลอดทั้งโปรเจกต์
+- `docs/00-archived/` — เอกสารที่เลิกใช้งานหรือถูกยกเลิกแล้ว แต่เก็บไว้เพื่ออ้างอิงย้อนหลัง (ห้ามลบเอกสารออกจากโปรเจกต์ — ให้ย้ายมาไว้ที่นี่แทน)
 
-The intended flow is **requirements → design → testing → retrospectives**, with `05-log` written in parallel throughout and `00-archived` catching anything replaced or cancelled along the way. Every folder currently contains only an `index.md` describing its purpose and linking to adjacent folders via Obsidian `[[wikilink]]` syntax — treat these as the folder-level table of contents to keep updated when adding real content.
+ลำดับการไหลของงานโดยรวมคือ **requirements → design → testing → retrospectives** โดย `05-log` จะถูกบันทึกคู่ขนานไปตลอดทั้งกระบวนการ ส่วน `00-archived` จะรับเอกสารที่ถูกแทนที่หรือยกเลิกระหว่างทาง แต่ละโฟลเดอร์ในตอนนี้มีเพียง `index.md` ที่อธิบายวัตถุประสงค์ของโฟลเดอร์และลิงก์ไปยังโฟลเดอร์ข้างเคียงด้วย Obsidian `[[wikilink]]` — ให้ถือว่าไฟล์เหล่านี้เป็นสารบัญประจำโฟลเดอร์ที่ต้องอัปเดตเมื่อมีการเพิ่มเนื้อหาจริง
 
-## Working in this repo
+## แนวทางการทำงานใน Repository นี้
 
-- When adding new documents, place them in the stage-appropriate subfolder (spec vs. plan vs. task, prototype vs. technical design, test-plan vs. test-result) rather than at the top level.
-- Preserve the existing `[[wikilink]]` cross-references between an index and its parent/sibling/child indexes when editing them, and add new cross-references when new documents are introduced.
-- Keep new content in Thai to match the existing documentation, unless the user requests otherwise.
-- Don't delete documents that become obsolete — move them into `docs/00-archived/` per the convention stated in that folder's index.
+- เมื่อเพิ่มเอกสารใหม่ ให้วางไว้ในโฟลเดอร์ย่อยที่ตรงกับขั้นตอนนั้นๆ (spec หรือ plan หรือ task, prototype หรือ technical design, test-plan หรือ test-result) แทนที่จะวางไว้ที่ระดับบนสุด
+- รักษาลิงก์ `[[wikilink]]` ที่เชื่อมโยงระหว่าง index กับ index ของโฟลเดอร์แม่/พี่น้อง/ลูกไว้เมื่อแก้ไข และเพิ่มลิงก์ใหม่เมื่อมีการเพิ่มเอกสารใหม่
+- เขียนเนื้อหาใหม่เป็นภาษาไทยให้สอดคล้องกับเอกสารที่มีอยู่แล้ว เว้นแต่ผู้ใช้จะร้องขอเป็นอย่างอื่น
+- อย่าลบเอกสารที่ล้าสมัยทิ้ง — ให้ย้ายไปไว้ที่ `docs/00-archived/` ตามข้อตกลงที่ระบุไว้ใน index ของโฟลเดอร์นั้น
