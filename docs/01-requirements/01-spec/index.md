@@ -13,3 +13,4 @@
 
 - [[20260802-001-table-self-order|ระบบสั่งกาแฟด้วยตนเองจากโต๊ะ (Table Self-Order)]]
 - [[20260802-002-sales-dashboard|หน้า Dashboard สรุปยอดขาย (Sales Dashboard)]]
+- [[20260802-003-audit-log-pdpa|ระบบเก็บ Audit Log และการปฏิบัติตาม PDPA]]
