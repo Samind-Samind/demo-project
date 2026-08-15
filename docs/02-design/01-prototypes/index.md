@@ -7,3 +7,7 @@
 - Design system เบื้องต้น เช่น สี ฟอนต์ คอมโพเนนต์หลัก
 
 ใช้สำหรับสื่อสารและตกลงหน้าตาของระบบก่อนลงมือพัฒนาจริง โดยอ้างอิงความต้องการจาก [[../../01-requirements/01-spec/index|01-spec]] และส่งต่อรายละเอียดเชิงระบบให้ [[../02-technical/index|02-technical]]
+
+## เอกสารในโฟลเดอร์นี้
+
+- [[user-journey|User Journey]] — user journey ต่อ role พร้อม Mermaid diagram และ mapping กลับไปยัง requirement ต้นทางใน [[../../01-requirements/01-spec/index|01-spec]]
